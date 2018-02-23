@@ -43,9 +43,9 @@ import { Factura } from '../Factura';
 export class SacarVehiculoComponent implements OnInit {
 
   carro:Carro;
-  factura:Factura;
+  factura:Factura[];
   facturaForm:FormGroup;
-  algo:string;
+  algo:any;
 
   state = 'inicial';
 
@@ -71,10 +71,9 @@ export class SacarVehiculoComponent implements OnInit {
       );
 
       this.vigilante.facturar(carro).subscribe(
-        response => {
-          this.factura = response;
-          //this.algo = JSON.parse(response.);        
-          console.log(response);
+        factura => {
+          this.factura = factura;        
+          console.log(factura);
         },
         err => {
           console.log(err);

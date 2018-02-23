@@ -7,7 +7,7 @@ import { CarroComponent } from './carro/carro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MotoComponent } from './moto/moto.component';
 import { SacarVehiculoComponent } from './sacar-vehiculo/sacar-vehiculo.component';
-import { ReyesmaricaComponent } from './reyesmarica/reyesmarica.component';
+
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { ReyesmaricaComponent } from './reyesmarica/reyesmarica.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [ListarVehiculosComponent, InicioComponent, AgregarComponent, CarroComponent, MotoComponent, SacarVehiculoComponent, ReyesmaricaComponent]
+  declarations: [ListarVehiculosComponent, InicioComponent, AgregarComponent, CarroComponent, MotoComponent, SacarVehiculoComponent]
 })
 export class ParqueaderoModule { }

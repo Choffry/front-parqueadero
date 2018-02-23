@@ -36,10 +36,9 @@ export class VigilanteService {
                     .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
-  facturar(carro:Carro):Observable<Factura>{
+  facturar(carro:Carro):Observable<Factura[]>{
     return this.http.post(this.facturaURL, carro)
                     .map((res:Response) => res.json()
                     .catch((error:any) => Observable.throw(error.json().error || 'Server error')));
-                    debugger
   }
 }

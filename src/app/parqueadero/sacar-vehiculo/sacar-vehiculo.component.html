@@ -23,31 +23,31 @@
           <h2 class="panel-title centrar">Comprobante de pago</h2>
         </div>
 
-        <ul class="list-group izquierda ">
+        <ul class="list-group izquierda" *ngFor="let fact of factura">
 
           <li class="list-group-item">
             <h6 class="estilos-h6">Placa</h6>
-            <p class="margen-p"></p>
+            <p class="margen-p">{{fact.placa}}</p>
           </li>
 
           <li class="list-group-item hidden">
             <h6 class="estilos-h6">Cilindraje</h6>
-            <p class="margen-p">{{factura}}</p>
+            <p class="margen-p">{{fact.cilindraje}}</p>
           </li>
 
           <li class="list-group-item">
             <h6 class="estilos-h6">Hora de ingreso</h6>
-            <p class="margen-p">{{factura.placa}}</p>
+            <p class="margen-p">{{fact.horaIngreso}}</p>
           </li>
 
           <li class="list-group-item">
             <h6 class="estilos-h6">Hora de salida</h6>
-            <p class="margen-p">{{factura}}</p>
+            <p class="margen-p">{{fact.horaSalida}}</p>
           </li>
 
           <li class="list-group-item">
             <h6 class="estilos-h6">Total a pagar</h6>
-            <p class="margen-p">{{factura}}</p>
+            <p class="margen-p">{{fact.pagoTotal}}</p>
           </li>
         </ul>
 
