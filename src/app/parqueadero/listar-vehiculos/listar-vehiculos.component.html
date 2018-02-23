@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col well">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Vehiculos dentro del parqueadero</h1>
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <section class="main ">
+        <table class="table table-striped table-bordered">
+
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Tipo de vehículo</th>
+              <th>Hora de ingreso</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let vehiculo of vehiculos">
+              <th>{{vehiculo.placa}}</th>
+              <th>{{vehiculo.tipo}}</th>
+              <th>{{vehiculo.fechaIngreso | date:'medium'}}</th>
+            </tr>
+          </tbody>
+  
+        </table>
+      </section>
+      <div class="text-right">
+        <button type="button" class="btn btn-primary" (click)="redireccionInicio()">Atras</button>
+      </div>
+    </div>
+  </div>
+</div>

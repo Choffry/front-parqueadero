@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 well">
+      <section>
+        <form novalidate [formGroup]="carroForm" (ngSubmit)="submitCarro()">
+          <h2>Ingresar Carro</h2>
+            <div class="form-group">
+              <label>Placa</label>
+              <input type="text" class="form-control" formControlName="placa">
+            </div>
+
+          <button type="submit" class="btn btn-primary push-right"  [disabled]="!carroForm.valid" >Guardar</button>
+          <button type="button" class="btn btn-default" (click)="redireccionInicio()">Cancelar</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 well">
+      <section>
+        <form novalidate [formGroup]="motoForm" (ngSubmit)="submitMoto()">
+          <h2>Ingresar Moto</h2>
+            <div class="form-group">
+              <label>Placa</label>
+              <input type="text" class="form-control" formControlName="placa">
+
+              <label>Cilindraje</label>
+              <input type="number" class="form-control" formControlName="cilindraje">
+            </div>
+
+          <button type="submit" class="btn btn-primary"  [disabled]="!motoForm.valid" >Guardar</button>
+          <button type="button" class="btn btn-default" (click)="redireccionInicio()">Cancelar</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>

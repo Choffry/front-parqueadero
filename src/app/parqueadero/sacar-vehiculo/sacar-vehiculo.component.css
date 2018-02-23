@@ -1,0 +1,21 @@
+.centrar{
+    text-align: center;
+}
+
+.derecha{
+    text-align: right;
+}
+
+.izquierda{
+    text-align: left;
+}
+
+.estilos-h6{
+    margin: 0px;
+    margin-bottom: 5px;
+    opacity: 0.5;
+}
+
+.margen-p{
+    margin: 0px;
+}
