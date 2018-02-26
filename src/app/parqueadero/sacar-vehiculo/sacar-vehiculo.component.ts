@@ -42,12 +42,11 @@ import { Factura } from '../Factura';
 
 export class SacarVehiculoComponent implements OnInit {
 
-  carro:Carro;
-  factura:Factura[];
+  factura:Factura;
   facturaForm:FormGroup;
-  algo:any;
 
   state = 'inicial';
+  estado = false;
 
   animar(){
     this.state = (this.state == 'final') ? 'inicial' : 'final';
@@ -79,7 +78,7 @@ export class SacarVehiculoComponent implements OnInit {
           console.log(err);
         }
       );
-    }    
+    }
     this.facturaForm.reset();
   }
 
