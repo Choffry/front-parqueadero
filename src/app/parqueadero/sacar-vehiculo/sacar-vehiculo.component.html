@@ -2,56 +2,58 @@
   <div class="row">
 
     <div class="col-md-4 well" [@contenedorAnimable]="state">
-        <form novalidate [formGroup]="facturaForm" (ngSubmit)="getFactura()">
-          <h2>Sacar Vehiculo</h2>
-          <div class="form-group">
-            <label>Placa</label>
-            <input type="text" class="form-control" formControlName="placa">
-          </div>
 
-          <button type="submit" class="btn btn-primary push-right" [disabled]="!facturaForm.valid" (click)="animar()">Sacar</button>
-          <button type="button" class="btn btn-default" (click)="redireccionInicio()">Cancelar</button>
-          
-          <div class="col-md-4" [@animacionFactura]="state" >
-            <div class="panel panel-info">
-      
-              <div class="panel-heading">
-                <h2 class="panel-title centrar">Comprobante de pago</h2>
-              </div>
-      
-              <ul class="list-group izquierda" >
-      
-                <li class="list-group-item">
-                  <h6 class="estilos-h6">Placa</h6>
-                  <p class="margen-p">{{factura.placa}}</p>
-                </li>
-      
-                <li class="list-group-item hidden">
-                  <h6 class="estilos-h6">Cilindraje</h6>
-                  <p class="margen-p">{{factura.cilindraje}}</p>
-                </li>
-      
-                <li class="list-group-item">
-                  <h6 class="estilos-h6">Hora de ingreso</h6>
-                  <p class="margen-p">{{factura.horaIngreso}}</p>
-                </li>
-      
-                <li class="list-group-item">
-                  <h6 class="estilos-h6">Hora de salida</h6>
-                  <p class="margen-p">{{factura.horaSalida}}</p>
-                </li>
-      
-                <li class="list-group-item">
-                  <h6 class="estilos-h6">Total a pagar</h6>
-                  <p class="margen-p">{{factura.pagoTotal}}</p>
-                </li>
-              </ul>
-      
-            </div>
-          </div>
-        </form>
+      <form novalidate [formGroup]="facturaForm" (ngSubmit)="getFactura()">
+        <h2>Sacar Vehiculo</h2>
+        <div class="form-group">
+          <label for="placa">Placa</label>
+          <input type="text" class="form-control" formControlName="placa">
+        </div>
+
+        <button type="submit" class="btn btn-primary push-right" [disabled]="!facturaForm.valid">Sacar</button>
+        <button type="button" class="btn btn-default" (click)="redireccionInicio()">Cancelar</button>
+        
+      </form>
+
     </div>
+    
+    <div class="col-md-4" [@animacionFactura]="state" >
+      <div class="panel panel-info">
 
+        <div class="panel-heading">
+          <h2 class="panel-title centrar">Comprobante de pago</h2>
+        </div>
+
+        <ul class="list-group izquierda" *ngIf="factura != null">
+
+          <li class="list-group-item">
+            <h6 class="estilos-h6">Placa</h6>
+            <p class="margen-p">{{factura.placa}}</p>
+          </li>
+
+          <li class="list-group-item hidden">
+            <h6 class="estilos-h6">Cilindraje</h6>
+            <p class="margen-p">{{factura.cilindraje}}</p>
+          </li>
+
+          <li class="list-group-item">
+            <h6 class="estilos-h6">Hora de ingreso</h6>
+            <p class="margen-p">{{factura.horaIngreso | date:'medium'}}</p>
+          </li>
+
+          <li class="list-group-item">
+            <h6 class="estilos-h6">Hora de salida</h6>
+            <p class="margen-p">{{factura.horaSalida | date:'medium'}}</p>
+          </li>
+
+          <li class="list-group-item">
+            <h6 class="estilos-h6">Total a pagar</h6>
+            <p class="margen-p">{{factura.pagoTotal}}</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
 
   </div>
 </div>
