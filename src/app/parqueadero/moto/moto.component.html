@@ -6,7 +6,7 @@
           <h2>Ingresar Moto</h2>
             <div class="form-group">
               <label>Placa</label>
-              <input type="text" class="form-control" formControlName="placa">
+              <input type="text" class="form-control" pattern="[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{1}" formControlName="placa" style="text-transform: uppercase" >
 
               <label>Cilindraje</label>
               <input type="number" class="form-control" formControlName="cilindraje">

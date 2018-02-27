@@ -4,7 +4,7 @@ export class Moto {
     cilindraje:number;
 
     constructor(placa:string, cilindraje:number){
-        this.placa = placa;
+        this.placa = placa.toUpperCase();
         this.cilindraje = cilindraje;
     }
 }

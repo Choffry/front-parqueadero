@@ -6,7 +6,7 @@
           <h2>Ingresar Carro</h2>
             <div class="form-group">
               <label>Placa</label>
-              <input type="text" class="form-control" formControlName="placa">
+              <input type="text" pattern="[a-zA-Z]{3}[0-9]{3}" class="form-control" formControlName="placa" style="text-transform:uppercase">
             </div>
 
           <button type="submit" class="btn btn-primary push-right"  [disabled]="!carroForm.valid" >Guardar</button>
