@@ -33,8 +33,7 @@ export class MotoComponent implements OnInit {
       let moto:Moto = new Moto(
       this.motoForm.controls['placa'].value,
       this.motoForm.controls['cilindraje'].value);
-      this.vigilante.agregarMoto(moto).subscribe();
-      alert("Vehiculo guardado con éxito")
+      this.vigilante.agregarMoto(moto);
     }
 
     this.motoForm.reset();

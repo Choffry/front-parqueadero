@@ -44,6 +44,7 @@ export class SacarVehiculoComponent implements OnInit {
 
   factura:Factura;
   facturaForm:FormGroup;
+  checkError:any;
 
   state:string = 'inicial';
 
@@ -69,10 +70,17 @@ export class SacarVehiculoComponent implements OnInit {
       );
 
       this.vigilante.facturar(carro).subscribe(
+
         factura => {
           this.factura = factura;        
           console.log(factura);
+        }, 
+        (error:Response) => {
+          this.checkError = error.json();
+          alert(this.checkError.message);
+          this.redireccionInicio();
         }
+
       );
     }
     this.animar();

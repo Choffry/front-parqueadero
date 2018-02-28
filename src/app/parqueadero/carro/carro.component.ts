@@ -30,8 +30,7 @@ export class CarroComponent implements OnInit {
     if (this.carroForm.valid) { 
       let carro:Carro = new Carro(
       this.carroForm.controls['placa'].value);
-      this.vigilante.agregarCarro(carro).subscribe();
-      alert("Vehiculo guardado con éxito")
+      this.vigilante.agregarCarro(carro);
     }
 
     this.carroForm.reset();
